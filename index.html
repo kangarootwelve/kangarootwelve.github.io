@@ -1,0 +1,42 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>KangarooTwelve: fast hashing based on Keccak-p</title>
+<meta name="author" content="Guido Bertoni, Joan Daemen, Michaël Peeters, Gilles Van Assche, Ronny Van Keer" />
+<style type="text/css">
+.sc {
+    font-variant: small-caps;
+}
+</style>
+</head>
+<body>
+<h1><span class="sc">KangarooTwelve</span>: fast hashing based on <span class="sc">Keccak</span>-<i>p</i></h1>
+
+<p>We propose a fast and 
+secure arbitrary output-length hash function aiming at a higher speed 
+than the FIPS 202's SHA-3 and SHAKE functions, while retaining their 
+flexibility and basis of security. Furthermore, it can exploit a high 
+degree of parallelism, whether using multiple cores or the 
+single-instruction multiple-data (SIMD) instruction set of modern 
+processors. On Intel's® Haswell and Skylake architectures, <span class="sc">KangarooTwelve</span>
+ tops at less than 1.5 cycles/byte for long messages on a single core. 
+Short messages also benefit from about a factor two speed-up compared to
+ the fastest FIPS 202 instance SHAKE128.</p>
+
+<ul>
+    <li><a href="http://keccak.noekeon.org/KangarooTwelve.pdf">Documentation</a></li>
+    <li><a href="https://github.com/gvanas/KeccakCodePackage/tree/master/Standalone/KangarooTwelve-reference">Reference implementation in Python</a></li>
+    <li><a href="https://github.com/gvanas/KeccakCodePackage">Optimized implementations, as part of the KCP</a></li>
+    <li><a href="https://github.com/gvanas/KeccakCodePackage/blob/master/TestVectors/KangarooTwelve.txt">Test vectors</a></li>
+</ul>
+
+<p style="text-align: center;">
+<img src="KeccakOnSkylake.png" title="Keccak on Skylake" alt="Speed measurements of various hash functions on Skylake"/>
+</p>
+
+<p>Guido Bertoni, Joan Daemen, Michaël Peeters, Gilles Van Assche and Ronny Van Keer — August 2016</p>
+
+</body>
+</html>
